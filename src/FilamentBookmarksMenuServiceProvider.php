@@ -13,9 +13,6 @@ use STAFEGROUPAB\FilamentBookmarksMenu\Resources\BookmarksMenuResource;
 
 class FilamentBookmarksMenuServiceProvider extends PluginServiceProvider
 {
-    protected array $styles = [
-        'my-package-styles' => __DIR__ . '/../dist/app.css',
-    ];
     
     public function configurePackage(Package $package): void
     {
