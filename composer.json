@@ -3,6 +3,7 @@
     "description": "This plugin let's you add a global bookmarks menu for users in Filament Admin",
     "keywords": [
         "Soer",
+        "Filament"
     ],
     "homepage": "https://github.com/ThijmenKort/filament-favourites",
     "license": "MIT",
