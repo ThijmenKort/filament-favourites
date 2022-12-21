@@ -13,9 +13,6 @@ use STAFEGROUPAB\FilamentBookmarksMenu\Resources\BookmarksMenuResource;
 
 class FilamentBookmarksMenuServiceProvider extends PluginServiceProvider
 {
-    protected array $resources = [
-        BookmarksMenuResource::class,
-    ];
 
     public function configurePackage(Package $package): void
     {
