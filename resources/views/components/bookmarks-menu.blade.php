@@ -19,7 +19,7 @@
                             Favorieten
                         </span>
                     </div>
-                    <hr class="p-1"/>
+                    <hr/>
 
                     @foreach($menuitems->whereNotNull('menu_user_id') as $menuitem)
                         <x-filament::dropdown.item
