@@ -1,21 +1,15 @@
 {
-    "name": "stafe-group-ab/filament-bookmarks-menu",
+    "name": "ThijmenKort/filament-favourites",
     "description": "This plugin let's you add a global bookmarks menu for users in Filament Admin",
     "keywords": [
-        "STAFE-GROUP-AB",
-        "filament",
-        "bookmarks",
-        "favorites",
-        "filament admin",
-        "filament plugin",
-        "filament-bookmarks-menu"
+        "Soer",
     ],
-    "homepage": "https://github.com/stafe-group-ab/filament-bookmarks-menu",
+    "homepage": "https://github.com/ThijmenKort/filament-favourites",
     "license": "MIT",
     "authors": [
         {
-            "name": "Andreas Kviby, Stafe Group",
-            "email": "andreas@getstafe.com",
+            "name": "Thijmen Kort",
+            "email": "t.kort@soer.nl",
             "role": "Developer"
         }
     ],
