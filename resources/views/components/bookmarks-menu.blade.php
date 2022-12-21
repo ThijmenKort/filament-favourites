@@ -19,7 +19,7 @@
                             Favorieten
                         </span>
                     </div>
-                    <hr/>
+                    <hr class="border-gray-800 dark:border-white"/>
 
                     @foreach($menuitems->whereNotNull('menu_user_id') as $menuitem)
                         <x-filament::dropdown.item
@@ -33,7 +33,7 @@
                         >
                           {{ $menuitem['menu_label'] }}
                         </x-filament::dropdown.item>
-                        <hr class="p-0.5 border-amber-200"/>
+                        <hr class="p-0.5 border-gray-300 dark:border-gray-500"/>
                     @endforeach
                 @endif
             </x-filament::dropdown.list>
