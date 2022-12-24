@@ -3,8 +3,8 @@
         <x-filament::dropdown placement="bottom-end">
             <x-slot name="trigger" class="ml-4">
                 <button  @class([
-                'flex flex-shrink-0 w-10 h-10 rounded-full bg-gray-200 items-center justify-center',
-                'dark:bg-gray-900' => config('filament.dark_mode'),
+                'flex flex-shrink-0 w-10 h-10 rounded-full items-center justify-center hover:bg-gray-500/5',
+                'dark:hover:bg-gray-300/5' => config('filament.dark_mode'),
             ]) aria-label="{{ __('filament::layout.buttons.user_menu.label') }}">
                     @svg(config('filament-bookmarks-menu.bookmark_icon'), config('filament-bookmarks-menu.bookmark_class'))
                 </button>
