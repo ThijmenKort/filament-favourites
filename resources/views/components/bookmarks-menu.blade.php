@@ -14,27 +14,21 @@
             @endif
             <x-filament::dropdown.list>
                 @if($menuitems->whereNotNull('menu_user_id')->count()>0)
-                    <div class="filament-dropdown-header flex w-full p-2 text-md font-semibold">
-                        <span class="filament-dropdown-header-label">
-                            Favorieten
-                        </span>
+                <div class="filament-dropdown-header w-full rounded-md border-1 divide-y divide-gray-100 dark:divide-gray-700 focus:outline-none">
+                    <div class="px-4 py-3" role="none">
+                        <p class="filament-dropdown-header flex justify-content items-center truncate text-md font-medium text-gray-900 dark:text-gray-200" role="none">@svg('heroicon-s-star', 'h-5 mr-2')Favorieten</p>
                     </div>
-                    <hr class="border-gray-800 dark:border-white"/>
-
-                    @foreach($menuitems->whereNotNull('menu_user_id') as $menuitem)
-                        <x-filament::dropdown.item
-                            class="mt-1 mb-1"
-                            :color="'secondary'"
-                            icon=""
-                            :href="$menuitem['menu_url']"
-                            :target="$menuitem['menu_target']"
-                            action="Create"
-                            :tag="$menuitem['menu_url'] ? 'a' : 'button'"
-                        >
-                          {{ $menuitem['menu_label'] }}
-                        </x-filament::dropdown.item>
-                        <hr class="p-0.5 border-gray-300 dark:border-gray-500"/>
-                    @endforeach
+                    <div class="py-1" role="none">
+                        @foreach($menuitems->whereNotNull('menu_user_id') as $menuitem)
+                            <a href="{{ $menuitem['menu_url'] }}" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 hover:text-gray-900 dark:text-gray-200 dark:hover:bg-gray-700"> {{ $menuitem['menu_label'] }}</a>
+                        @endforeach
+                    </div>
+{{--                    <div class="py-1" role="none">--}}
+{{--                        <form method="POST" action="#" role="none">--}}
+{{--                            <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+                </div>
                 @endif
             </x-filament::dropdown.list>
         </x-filament::dropdown>
