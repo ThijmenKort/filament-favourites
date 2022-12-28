@@ -16,9 +16,9 @@
                 @if($menuitems->whereNotNull('menu_user_id')->count()>0)
                 <div class="filament-dropdown-header w-full rounded-md border-1 divide-y divide-gray-100 dark:divide-gray-700 focus:outline-none">
                     <div class="px-4 py-3" role="none">
-                        <p class="filament-dropdown-header flex justify-content items-center truncate text-md font-medium text-gray-900 dark:text-gray-200" role="none">@svg('heroicon-s-star', 'h-5 mr-2')Favorieten</p>
+                        <p class="filament-dropdown-header flex justify-content items-center truncate text-md font-medium text-gray-900 dark:text-gray-200">@svg('heroicon-s-star', 'h-5 mr-2')Favorieten</p>
                     </div>
-                    <div class="py-1" role="none">
+                    <div class="py-1">
                         @foreach($menuitems->whereNotNull('menu_user_id') as $menuitem)
                             <a href="{{ $menuitem['menu_url'] }}" class="text-gray-700 block px-4 py-2 text-sm hover:bg-gray-200 hover:text-gray-900 dark:text-gray-200 dark:hover:bg-gray-700"> {{ $menuitem['menu_label'] }}</a>
                         @endforeach
