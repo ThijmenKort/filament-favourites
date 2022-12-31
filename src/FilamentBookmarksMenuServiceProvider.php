@@ -47,7 +47,7 @@ class FilamentBookmarksMenuServiceProvider extends PluginServiceProvider
 
         if (config('filament-bookmarks-menu.add_bookmarks_by_users', true)) {
             Filament::registerRenderHook(
-                'content.start',
+                'page.actions.end',
                 fn (): string => Blade::render('@livewire("bookmarks-icon")'),
             );
         }
