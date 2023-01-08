@@ -11,7 +11,7 @@
             </x-slot>
             <x-filament::dropdown.list>
               @if(!$menuitems->count())
-                            <p class="p-4">{{ __('filament-bookmarks-menu::filament-bookmarks-menu.notification.empty') }}</p>
+                            <p class="p-4">Je hebt nog geen favoriete pagina's toegevoegd.</p>
                         @endif
                 @if($menuitems->whereNotNull('menu_user_id')->count()>0)
                 <div class="filament-dropdown-header w-full rounded-md border-1 divide-y divide-gray-100 dark:divide-gray-700 focus:outline-none">
