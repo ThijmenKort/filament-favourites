@@ -50,7 +50,7 @@ class BookmarksIcon extends Component
         if ($exists) {
             $exists->delete();
             Notification::make()
-                ->title(__('filament-bookmarks-menu::filament-bookmarks-menu.notification.remove'))
+                ->title('De pagina is verwijderd van je favorieten lijst!')
                 ->icon(config('filament-bookmarks-menu.notification_remove_icon'))
                 ->iconColor(config('filament-bookmarks-menu.notification_remove_color'))
                 ->send();
@@ -68,7 +68,7 @@ class BookmarksIcon extends Component
             $bm->menu_user_id = Auth::user()->id;
             $bm->save();
             Notification::make()
-                ->title(__('filament-bookmarks-menu::filament-bookmarks-menu.notification.add'))
+                ->title('De favoriete pagina is toegevoegd aan je favorieten lijst!')
                 ->icon(config('filament-bookmarks-menu.notification_add_icon'))
                 ->iconColor(config('filament-bookmarks-menu.notification_add_color'))
                 ->send();
